@@ -28,7 +28,3 @@ function calcular() {
     // Exibir o valor total a pagar de imposto
     document.getElementById('total-pagar').innerText = impostoAPagar > 0 ? currencyFormatter.format(impostoAPagar) : 'ISENTO';
 }
-
-function fixTwoNumberDecimal(event) {
-    this.value = parseFloat(this.value).toFixed(2);
-}
