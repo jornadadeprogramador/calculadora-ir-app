@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora IR</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <main>
+        <h1>Calculadora de Imposto de Renda</h1>
+        <div class="card">
+            <div class="card-item">
+                <table>
+                    <caption>Tabela Imposto de Renda 2024</caption>
+                    <tr>
+                        <th class="text-align-left">Renda</th>
+                        <th>% Imposto</th>
+                    </tr>
+                    <tr>
+                        <td>De R$ 0 a R$ 2.000,00</td>
+                        <td class="text-align-center">Isento</td>
+                    </tr>
+                    <tr>
+                        <td>De R$ 2.000,01 a R$ 3.000,00</td>
+                        <td class="text-align-center">8%</td>
+                    </tr>
+                    <tr>
+                        <td>De R$ 3.000,01 a R$ 4.500,00</td>
+                        <td class="text-align-center">18%</td>
+                    </tr>
+                    <tr>
+                        <td>Acima de R$ 4.500,00</td>
+                        <td class="text-align-center">28%</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="card-item">
+                <div class="card-container">
+                    <div class="form">
+                        <label for="salario">Salário</label>
+                        <input id="salario" min="0" max="10" step="0.25" onchange="fixTwoNumberDecimal($event)" type="number" placeholder="Informe o salário"/>
+                        <button type="button" onclick="calcular()">CALCULAR</button>
+                    </div>
+                    <div class="resultado">
+                        <label>Total a Pagar 👇</label>
+                        <h2 id="total-pagar">R$ 0,00</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
